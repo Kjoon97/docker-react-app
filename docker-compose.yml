@@ -8,11 +8,7 @@ services:     # 이 곳에 실행하려는 컨테이너들을 정의
             - "3000:3000"
         volumes: 
             - /usr/src/app/node_modules
-            - ./:/usr/src/app
-        environment:
-            # 소스 수정 즉시 반영되는
-            # 핫로딩 활성화하는 부분
-            - CHOKIDAR_USEPOLLING=true          
+            - ./:/usr/src/app          
         stdin_open: true
     tests:
         build:
