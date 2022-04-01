@@ -3,9 +3,9 @@ services:     # 이 곳에 실행하려는 컨테이너들을 정의
     react:    # 컨테이너 이름
         build:         
             context: .
-            dockerfile: Dockerfile
+            dockerfile: Dockerfile.dev
         ports: 
-            - "80:80"
+            - "3000:3000"
         volumes: 
             - /usr/src/app/node_modules
             - ./:/usr/src/app          
